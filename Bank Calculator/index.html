@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Kredit</title>
+</head>
+<body>
+   <div class="box">
+        <label for="mebleg" class="lbl1">Məbləğ</label>
+        <input type="text" value="10000" id="mebleg" class="inp1">
+        <input type="range" oninput="mebleg.value=slider.value"  min="300" max="30000" id="slider" class="rng1">
+        <div class="ranges">
+            <span>300</span>
+            <span>30000</span>
+        </div>
+   </div>
+   <div class="box">
+        <label for="faiz" class="lbl1">Faiz</label>
+        <input type="text" value="15" id="faiz" class="inp1">
+        <input type="range" oninput="faiz.value=slider2.value"  min="12" max="20" id="slider2" class="rng2">
+        <div class="ranges">
+            <span>12%</span>
+            <span>20%</span>
+        </div>
+
+    </div>
+   <div class="box">
+        <label for="ay" class="lbl1">Ay</label>
+        <input type="text" value="15" id="ay" class="inp1">
+        <input type="range" oninput="ay.value=slider3.value"  min="3" max="59" id="slider3" class="rng3">
+        <div class="ranges">
+            <span>3 ay</span>
+            <span>59 ay</span>
+        </div>
+    </div>
+    <div class="btn">
+        <button id="hesabla" onclick="Hesabla()">Hesabla</button>
+    </div>
+    <div class="general">
+        <h4>Umumi mebleg: <span id="umumi"></span></h4>
+        <h4>Ayliq odenish: <span id="ayliq"></span></h4>
+    </div>
+    
+
+
+
+
+
+    <script src="/main.js"></script>
+</body>
+</html>
